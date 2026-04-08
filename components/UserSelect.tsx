@@ -81,7 +81,9 @@ export function UserSelect({ currentUser, onUserChange }: UserSelectProps) {
         <div className="flex gap-2">
           <Select value={currentUser?.id || ''} onValueChange={handleUserSelect}>
             <SelectTrigger className="flex-1">
-              <SelectValue placeholder="ユーザーを選択..." />
+              <SelectValue placeholder="ユーザーを選択...">
+                {currentUser?.name}
+              </SelectValue>
             </SelectTrigger>
             <SelectContent>
               {users.map((user) => (

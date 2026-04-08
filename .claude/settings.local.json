@@ -14,7 +14,8 @@
       "Bash(git push:*)",
       "Bash(vercel:*)",
       "Bash(git commit -m 'fix: TypeScriptコンパイルエラーを修正:*)",
-      "Bash(git commit -m 'feat: ダークモード機能を実装:*)"
+      "Bash(git commit -m 'feat: ダークモード機能を実装:*)",
+      "Bash(git commit -m 'fix: ユーザー表示をIDから名前に修正:*)"
     ]
   }
 }
