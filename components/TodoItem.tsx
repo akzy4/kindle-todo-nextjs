@@ -26,7 +26,7 @@ const priorityLabels: Record<Priority, string> = {
 
 export function TodoItem({ todo, onToggle, onDelete }: TodoItemProps) {
   return (
-    <div className="flex items-center gap-3 p-4 bg-white rounded-lg border border-gray-200 hover:shadow-sm transition-shadow">
+    <div className="flex items-center gap-3 p-4 bg-white dark:bg-slate-800 rounded-lg border border-gray-200 dark:border-slate-700 hover:shadow-sm dark:hover:shadow-lg transition-shadow">
       <Checkbox
         checked={todo.completed}
         onCheckedChange={() => onToggle(todo)}
@@ -37,17 +37,17 @@ export function TodoItem({ todo, onToggle, onDelete }: TodoItemProps) {
         <p
           className={`font-medium text-sm ${
             todo.completed
-              ? 'line-through text-gray-400'
-              : 'text-gray-900'
+              ? 'line-through text-gray-400 dark:text-gray-600'
+              : 'text-gray-900 dark:text-white'
           }`}
         >
           {todo.title}
         </p>
         {todo.description && (
-          <p className="text-xs text-gray-500 mt-1">{todo.description}</p>
+          <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">{todo.description}</p>
         )}
         {todo.dueDate && (
-          <p className="text-xs text-gray-500 mt-1">
+          <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
             期限: {new Date(todo.dueDate).toLocaleDateString('ja-JP')}
           </p>
         )}

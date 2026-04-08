@@ -23,6 +23,7 @@ import {
 import { TodoForm } from './TodoForm';
 import { TodoItem } from './TodoItem';
 import { UserSelect } from './UserSelect';
+import { ThemeToggle } from './ThemeToggle';
 
 export function TodoApp() {
   const [todos, setTodos] = useState<Todo[]>([]);
@@ -116,12 +117,15 @@ export function TodoApp() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4 sm:p-8">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-slate-950 dark:to-slate-900 p-4 sm:p-8 transition-colors">
       <div className="max-w-2xl mx-auto">
         {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">TODO リスト</h1>
-          <p className="text-gray-600">タスクを管理して、生産性を上げよう</p>
+        <div className="mb-8 flex items-start justify-between">
+          <div>
+            <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">TODO リスト</h1>
+            <p className="text-gray-600 dark:text-gray-400">タスクを管理して、生産性を上げよう</p>
+          </div>
+          <ThemeToggle />
         </div>
 
         {/* User Select */}
