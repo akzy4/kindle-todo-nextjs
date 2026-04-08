@@ -23,7 +23,8 @@ export function UserSelect({ currentUser, onUserChange }: UserSelectProps) {
   const [isAddingUser, setIsAddingUser] = useState(false);
   const [newUserName, setNewUserName] = useState('');
 
-  const handleUserSelect = (userId: string) => {
+  const handleUserSelect = (userId: string | null) => {
+    if (!userId) return;
     const user = users.find((u) => u.id === userId);
     if (user) {
       setCurrentUser(user);

@@ -83,7 +83,7 @@ export function TodoForm({ onSubmit, categories }: TodoFormProps) {
               if (value === '__new__') {
                 setNewCategory('');
               } else {
-                setCategory(value);
+                setCategory(value || '');
               }
             }}
           >

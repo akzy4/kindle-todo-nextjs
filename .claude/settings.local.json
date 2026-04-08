@@ -8,7 +8,12 @@
       "Bash(npm run:*)",
       "Bash(curl -s http://localhost:3000)",
       "Bash(git add:*)",
-      "Bash(git commit -m ':*)"
+      "Bash(git commit -m ':*)",
+      "Bash(gh repo:*)",
+      "Bash(gh auth:*)",
+      "Bash(git push:*)",
+      "Bash(vercel:*)",
+      "Bash(git commit -m 'fix: TypeScriptコンパイルエラーを修正:*)"
     ]
   }
 }

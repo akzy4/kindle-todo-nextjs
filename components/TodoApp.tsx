@@ -152,7 +152,7 @@ export function TodoApp() {
 
         {/* Filters */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
-          <Select value={filterCategory} onValueChange={setFilterCategory}>
+          <Select value={filterCategory} onValueChange={(value) => setFilterCategory(value || '')}>
             <SelectTrigger>
               <SelectValue placeholder="全カテゴリ" />
             </SelectTrigger>
@@ -168,7 +168,7 @@ export function TodoApp() {
 
           <Select
             value={filterPriority}
-            onValueChange={(value) => setFilterPriority(value as Priority | 'all')}
+            onValueChange={(value) => setFilterPriority((value || 'all') as Priority | 'all')}
           >
             <SelectTrigger>
               <SelectValue />
